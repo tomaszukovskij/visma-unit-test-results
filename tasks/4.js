@@ -2,9 +2,9 @@ var arr = [1, 2, 1, 3, 4];
 
 function mapArr(arr) {
   var newArr = [];
-  arr.map(function (x) {
-    if (!newArr.includes(x)) {
-      newArr.push(x);
+  arr.forEach((item) => {
+    if (!newArr.includes(item)) {
+      newArr.push(item);
     }
   });
 
@@ -12,14 +12,19 @@ function mapArr(arr) {
 }
 
 function filterArr(arr) {
-  var newArr = arr.filter(function (a, b) {
-    return arr.indexOf(a) === b;
+  var newArr = arr.filter(function (element, index) {
+    return arr.indexOf(element) === index;
   });
 
   return newArr;
 }
 
+function setArr(arr) {
+  return [...new Set(arr)];
+}
+
 module.exports = {
   mapArr,
   filterArr,
+  setArr,
 };

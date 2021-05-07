@@ -28,10 +28,6 @@ CalculatorPr.prototype.result = function () {
   return this.result;
 };
 
-var cal = new CalculatorPr(0);
-
-var amount = cal.add(5).multiply(2).add(20).divide(3).result;
-
 // Obj
 
 function Calculator(amount) {

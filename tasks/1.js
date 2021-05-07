@@ -1,16 +1,15 @@
 function rangeArr(a, b) {
-  const array = [];
+  const isHeigher = a > b;
+  const length = isHeigher ? a - b : b - a;
 
-  for (let index = a; index <= b; index++) {
-    array.push(index);
-  }
-
-  return array;
+  return Array.from({ length }, (v, i) => {
+    return isHeigher ? a - i : a + i;
+  });
 }
 
 function rangeWhile(a, b) {
   var arr = [];
-  while (a <= b) {
+  while (a < b) {
     arr.push(a++);
   }
 
