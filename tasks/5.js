@@ -1,8 +1,10 @@
 function wordSearch(w) {
-  var string = "Hello World".toLowerCase();
-  w = w.toLowerCase();
+  // var string = "Hello World".toLowerCase();
+  // w = w.toLowerCase();
 
-  return string.includes(w);
+  const matched = new RegExp("\\b" + "Hello World" + "\\b").test(w);
+
+  return matched;
 }
 
 module.exports = {

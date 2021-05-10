@@ -12,11 +12,8 @@ var houses = [
 ];
 
 function motto(name) {
-  for (let index = 0; index < houses.length; index++) {
-    if (houses[index].name === name) {
-      return houses[index].motto;
-    }
-  }
+  const found = houses.find((element) => element.name === name);
+  return found.motto;
 }
 
 function mottoFilter(name) {
